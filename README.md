@@ -10,6 +10,10 @@ ext install ayu-adaptive
 
 Then go to `Preferences > Color Theme > Ayu One`.
 
+Each palette also has a **(Dark Separators)** variant in the Color Theme picker.
+The original variants keep their light separators; the new variants use matching
+dark charcoal separators: One `#181B20`, Adapta `#182126`, and Mojave `#202123`.
+
 If you want to setup File Icon, install the original [vscode-ayu theme](https://marketplace.visualstudio.com/items?itemName=teabyii.ayu) then go to Preferences > File Icon Theme > Ayu.
 
 ## Screenshots

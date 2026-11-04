@@ -2,7 +2,7 @@
   "name": "ayu-adaptive",
   "displayName": "Ayu Adaptive",
   "description": "A modification of Ayu theme with Atom One, Adapta GTK and macOS Mojave color palette.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "publisher": "ccy",
   "license": "MIT",
   "repository": {
@@ -44,6 +44,21 @@
         "label": "Ayu Mojave",
         "uiTheme": "vs-dark",
         "path": "./ayu-mojave.json"
+      },
+      {
+        "label": "Ayu One (Dark Separators)",
+        "uiTheme": "vs-dark",
+        "path": "./ayu-one-dark-separators.json"
+      },
+      {
+        "label": "Ayu Adapta (Dark Separators)",
+        "uiTheme": "vs-dark",
+        "path": "./ayu-adapta-dark-separators.json"
+      },
+      {
+        "label": "Ayu Mojave (Dark Separators)",
+        "uiTheme": "vs-dark",
+        "path": "./ayu-mojave-dark-separators.json"
       }
     ]
   },

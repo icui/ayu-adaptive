@@ -65,7 +65,7 @@ const mojaveColors = {
     'editor.selectionBackground': '#57575990'
 }
 
-const exportTheme = (name, mod) => {
+const exportTheme = (name, mod, darkBorderColor) => {
     const filepath = path.join(__dirname, '/' + name + '.json');
     const theme = JSON.parse(fs.readFileSync(filepath));
 
@@ -331,8 +331,64 @@ const exportTheme = (name, mod) => {
 
     fs.writeFileSync(filepath, JSON.stringify(theme, null, '\t'));
     console.log(`Updated ${filepath}`);
+
+    // Derive the dark variant from the same palette and separator settings.
+    for (const key of Object.keys(themeColors)) {
+        if (themeColors[key] === borderColor) {
+            theme.colors[key] = darkBorderColor;
+        }
+    }
+    // These neutral outlines otherwise inherit light workbench defaults or
+    // foreground-based colors, rather than the shared separator color above.
+    // Keep focus, selection, validation, and other semantic accents intact.
+    const darkOutlineKeys = [
+        // Modern floating sidebars and compact panels use surface.border
+        // directly, bypassing panel.border and modernPanel.border.
+        'surface.border',
+        'modernActivityBar.border',
+        'editor.border',
+        'modernPanel.border',
+        'agentsPanel.border',
+        'agentsCard.border',
+        'agentsBottomPanel.border',
+        'input.border',
+        'dropdown.border',
+        'widget.border',
+        'editorWidget.border',
+        'sideBarSectionHeader.border',
+        'sideBarTitle.border',
+        'panelSection.border',
+        'panelSectionHeader.border',
+        'statusBar.noFolderBorder',
+        'statusBar.debuggingBorder',
+        'commandCenter.border',
+        'commandCenter.inactiveBorder',
+        'commandCenter.activeBorder',
+        'menu.border',
+        'menu.separatorBackground',
+        'textSeparator.foreground',
+        'tree.tableColumnsBorder',
+        'button.secondaryBorder',
+        'notificationCenter.border',
+        'notificationToast.border',
+        'notifications.border',
+        'chat.requestBorder',
+        'chat.checkpointSeparator',
+        'inlineChat.border',
+        'inlineChatInput.border',
+        'agentsChatInput.border',
+        'agentsNewSessionButton.border',
+        'agentFeedbackEditorWidget.border',
+        'agentFeedbackInputWidget.border'
+    ];
+    for (const key of darkOutlineKeys) {
+        theme.colors[key] = darkBorderColor;
+    }
+    const darkFilepath = path.join(__dirname, name + '-dark-separators.json');
+    fs.writeFileSync(darkFilepath, JSON.stringify(theme, null, '\t'));
+    console.log(`Updated ${darkFilepath}`);
 };
 
-exportTheme('ayu-one', oneColors);
-exportTheme('ayu-adapta', adaptaColors);
-exportTheme('ayu-mojave', mojaveColors);
+exportTheme('ayu-one', oneColors, '#181B20');
+exportTheme('ayu-adapta', adaptaColors, '#182126');
+exportTheme('ayu-mojave', mojaveColors, '#202123');
