@@ -98,6 +98,9 @@ const exportTheme = (name, mod) => {
         brightWhite: '#ffffff'
     };
     
+    // Match the subtle light separators used by the modern dark workbench.
+    const borderColor = '#ffffff1a';
+
     const themeColors = {
         // ----- Base colors -----
         'foreground': scheme.ui.fg,
@@ -141,7 +144,7 @@ const exportTheme = (name, mod) => {
         'list.highlightForeground': scheme.common.accent,
     
         'pickerGroup.foreground': scheme.common.accent,
-        'pickerGroup.border': scheme.ui.gridDivider,
+        'pickerGroup.border': borderColor,
     
         'button.background': `${scheme.common.accent}AA`,
         'button.hoverBackground': `${scheme.common.accent}BB`,
@@ -180,10 +183,10 @@ const exportTheme = (name, mod) => {
         'editorMarkerNavigation.background': scheme.ui.panel.bg,
         // 'editor.hoverHighlightBackground': '',
         'editorHoverWidget.background': scheme.ui.panel.bg,
-        'editorHoverWidget.border': scheme.ui.gridDivider,
+        'editorHoverWidget.border': borderColor,
         // 'editorBracketMatch.background': '',
         'editorBracketMatch.border': scheme.common.accent + '90',
-        'editorOverviewRuler.border': scheme.ui.gridDivider,
+        'editorOverviewRuler.border': borderColor,
         'editorOverviewRuler.errorForeground': scheme.syntax.error,
         'editorOverviewRuler.warningForeground': scheme.common.accent,
         'editorRuler.foreground': scheme.ui.gridDivider,
@@ -199,12 +202,12 @@ const exportTheme = (name, mod) => {
     
         // ----- Editor suggest -----
         'editorSuggestWidget.background': scheme.ui.panel.bg,
-        'editorSuggestWidget.border': scheme.ui.gridDivider,
+        'editorSuggestWidget.border': borderColor,
         'editorSuggestWidget.selectedBackground': scheme.ui.panel.rowBg,
         'editorSuggestWidget.highlightForeground': scheme.common.accent,
     
         // ----- Peek view editor -----
-        'peekView.border': scheme.ui.gridDivider,
+        'peekView.border': borderColor,
         'peekViewEditor.background': scheme.ui.panel.bg,
         'peekViewEditor.matchHighlightBackground': `${scheme.common.accent}33`,
         'peekViewTitle.background': scheme.ui.panel.bg,
@@ -220,10 +223,10 @@ const exportTheme = (name, mod) => {
     
         // ----- Workbench: editor group -----
         'editorGroup.background': scheme.ui.panel.bg,
-        'editorGroup.border': scheme.ui.gridDivider,
+        'editorGroup.border': borderColor,
         'editorGroupHeader.tabsBackground': scheme.common.bg,
         'editorGroupHeader.noTabsBackground': scheme.common.bg,
-        "editorGroupHeader.tabsBorder": scheme.ui.gridDivider,
+        "editorGroupHeader.tabsBorder": borderColor,
     
         // ----- Workbench: tabs -----
         'tab.activeBackground': scheme.ui.panel.bg,
@@ -231,14 +234,14 @@ const exportTheme = (name, mod) => {
         'tab.activeForeground': scheme.common.fg,
         'tab.activeBorder': scheme.common.accent,
         'tab.inactiveForeground': scheme.ui.fg,
-        'tab.border': scheme.ui.gridDivider,
+        'tab.border': borderColor,
         'tab.unfocusedActiveForeground': `${scheme.common.fg}AA`,
         'tab.unfocusedInactiveForeground': scheme.ui.fg,
         'tab.unfocusedActiveBorder': scheme.common.accent,
     
         // ----- Workbench: panel -----
         'panel.background': scheme.common.bg,
-        'panel.border': scheme.ui.gridDivider,
+        'panel.border': borderColor,
         'panelTitle.activeForeground': scheme.common.fg,
         'panelTitle.inactiveForeground': scheme.ui.fg,
         'panelTitle.activeBorder': scheme.common.accent,
@@ -246,7 +249,7 @@ const exportTheme = (name, mod) => {
         // ----- Workbench: status bar -----
         'statusBar.foreground': scheme.ui.fg,
         'statusBar.background': scheme.ui.panel.bg,
-        'statusBar.border': scheme.ui.gridDivider,
+        'statusBar.border': borderColor,
         'statusBar.noFolderBackground': scheme.ui.panel.bg,
         'statusBar.debuggingBackground': scheme.ui.panel.bg,
         'statusBar.debuggingForeground': scheme.ui.fg,
@@ -260,7 +263,7 @@ const exportTheme = (name, mod) => {
         // ----- Workbench: activity bar -----
         'activityBar.background': scheme.common.bg,
         'activityBar.foreground': scheme.ui.fg,
-        'activityBar.border': scheme.ui.gridDivider,
+        'activityBar.border': borderColor,
         'activityBarBadge.background': scheme.syntax.activeGuide,
         'activityBarBadge.foreground': '#fff',
     
@@ -269,14 +272,14 @@ const exportTheme = (name, mod) => {
         'sideBarTitle.foreground': scheme.ui.fg,
         'sideBarSectionHeader.background': scheme.syntax.lineHg,
         'sideBarSectionHeader.foreground': scheme.ui.fg,
-        'sideBar.border': scheme.ui.gridDivider,
+        'sideBar.border': borderColor,
     
         // ----- Workbench: title bar -----
         'titleBar.activeForeground': scheme.ui.fg,
         'titleBar.inactiveForeground': scheme.ui.fg,
         'titleBar.activeBackground': scheme.common.bg,
         'titleBar.inactiveBackground': scheme.common.bg,
-        'titleBar.border': scheme.ui.gridDivider,
+        'titleBar.border': borderColor,
     
         // ----- Workbench: notifications -----
         'notification.background': scheme.ui.gridDivider,
@@ -297,11 +300,12 @@ const exportTheme = (name, mod) => {
         'textBlockQuote.background': scheme.ui.panel.bg,
     
         // ----- Workbench: debug -----
-        'debugExceptionWidget.border': scheme.ui.gridDivider,
+        'debugExceptionWidget.border': borderColor,
         'debugExceptionWidget.background': scheme.ui.panel.bg,
         'debugToolBar.background': scheme.ui.panel.bg,
     
         // ----- Workbench: terminal -----
+        'terminal.border': borderColor,
         'terminal.background': terminalColors.background,
         'terminal.foreground': terminalColors.foreground,
         'terminal.ansiBlack': terminalColors.black,
