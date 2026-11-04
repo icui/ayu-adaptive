@@ -391,4 +391,4 @@ const exportTheme = (name, mod, darkBorderColor) => {
 
 exportTheme('ayu-one', oneColors, '#181B20');
 exportTheme('ayu-adapta', adaptaColors, '#182126');
-exportTheme('ayu-mojave', mojaveColors, '#202123');
+exportTheme('ayu-mojave', mojaveColors, '#232426');
