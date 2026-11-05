@@ -68,10 +68,6 @@ const mojaveColors = {
 const mojaveDarkColors = {
     'tab.border': '#ffffff1a',
     'tab.divider': '#ffffff1a',
-    'tab.activeBorder': '#ffffff1a',
-    'tab.unfocusedActiveBorder': '#ffffff1a',
-    'tab.activeBorderTop': '#ffffff1a',
-    'tab.unfocusedActiveBorderTop': '#ffffff1a',
     'tab.selectedBorderTop': '#ffffff1a',
     'tab.lastPinnedBorder': '#ffffff1a'
 }
