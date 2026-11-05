@@ -65,7 +65,35 @@ const mojaveColors = {
     'editor.selectionBackground': '#57575990'
 }
 
-const exportTheme = (name, mod, darkBorderColor) => {
+const mojaveDarkColors = {
+    'tab.border': '#ffffff1a',
+    'tab.divider': '#ffffff1a',
+    'tab.activeBorder': '#ffffff1a',
+    'tab.unfocusedActiveBorder': '#ffffff1a',
+    'tab.activeBorderTop': '#ffffff1a',
+    'tab.unfocusedActiveBorderTop': '#ffffff1a',
+    'tab.selectedBorderTop': '#ffffff1a',
+    'tab.lastPinnedBorder': '#ffffff1a',
+    // Focused chat inputs use focusBorder instead of input.border.
+    'focusBorder': '#ffffff1a',
+    'agentsChatInput.focusBorder': '#ffffff1a',
+    'sideBar.background': '#2e2f30',
+    'panel.background': '#2e2f30',
+    'terminal.background': '#2e2f30',
+    'commandCenter.background': '#2e2f30',
+    'commandCenter.activeBackground': '#2e2f30',
+    'commandCenter.debuggingBackground': '#2e2f30',
+    'agentStatusIndicator.background': '#2e2f30',
+    'modernUI.shellBackground': '#38393a',
+    'modernUI.inactiveShellBackground': '#38393a',
+    'titleBar.activeBackground': '#38393a',
+    'titleBar.inactiveBackground': '#38393a',
+    'statusBar.background': '#38393a',
+    'statusBar.noFolderBackground': '#38393a',
+    'statusBar.debuggingBackground': '#38393a'
+}
+
+const exportTheme = (name, mod, darkBorderColor, darkMod = {}) => {
     const filepath = path.join(__dirname, '/' + name + '.json');
     const theme = JSON.parse(fs.readFileSync(filepath));
 
@@ -333,6 +361,7 @@ const exportTheme = (name, mod, darkBorderColor) => {
     console.log(`Updated ${filepath}`);
 
     // Derive the dark variant from the same palette and separator settings.
+    Object.assign(theme.colors, darkMod);
     for (const key of Object.keys(themeColors)) {
         if (themeColors[key] === borderColor) {
             theme.colors[key] = darkBorderColor;
@@ -391,4 +420,4 @@ const exportTheme = (name, mod, darkBorderColor) => {
 
 exportTheme('ayu-one', oneColors, '#181B20');
 exportTheme('ayu-adapta', adaptaColors, '#182126');
-exportTheme('ayu-mojave', mojaveColors, '#232426');
+exportTheme('ayu-mojave', mojaveColors, '#232426', mojaveDarkColors);
