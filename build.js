@@ -73,7 +73,10 @@ const mojaveDarkColors = {
     'tab.activeBorderTop': '#ffffff1a',
     'tab.unfocusedActiveBorderTop': '#ffffff1a',
     'tab.selectedBorderTop': '#ffffff1a',
-    'tab.lastPinnedBorder': '#ffffff1a',
+    'tab.lastPinnedBorder': '#ffffff1a'
+}
+
+const mojaveSharedColors = {
     // Focused chat inputs use focusBorder instead of input.border.
     'focusBorder': '#ffffff1a',
     'agentsChatInput.focusBorder': '#ffffff1a',
@@ -420,4 +423,4 @@ const exportTheme = (name, mod, darkBorderColor, darkMod = {}) => {
 
 exportTheme('ayu-one', oneColors, '#181B20');
 exportTheme('ayu-adapta', adaptaColors, '#182126');
-exportTheme('ayu-mojave', mojaveColors, '#232426', mojaveDarkColors);
+exportTheme('ayu-mojave', { ...mojaveColors, ...mojaveSharedColors }, '#232426', mojaveDarkColors);
