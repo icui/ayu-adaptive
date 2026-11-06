@@ -132,6 +132,7 @@ const exportTheme = (name, mod, darkBorderColor, darkMod = {}) => {
         // ----- Base colors -----
         'foreground': scheme.ui.fg,
         'focusBorder': `${scheme.ui.fg}8A`,
+        'sash.hoverBorder': '#ffffff33',
     
         'widget.shadow': `${scheme.ui.panel.shadow}b3`,
     

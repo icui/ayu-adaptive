@@ -1,5 +1,5 @@
-## 0.2.3
-`2019-9-18`
+## 0.2.4
+`2026-11-6`
 Update for new vscode UI with light and dark separator variants
 
 ## 0.1.5

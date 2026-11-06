@@ -3,6 +3,7 @@
 	"colors": {
 		"foreground": "#738699",
 		"focusBorder": "#00000000",
+		"sash.hoverBorder": "#ffffff33",
 		"widget.shadow": "#11141ab3",
 		"badge.background": "#66737f",
 		"badge.foreground": "#fff",
