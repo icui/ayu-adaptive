@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/libcy/ayu-adaptive/master/assets/logo.png" width="120">
+<img src="https://raw.githubusercontent.com/icui/ayu-adaptive/master/assets/logo.png" alt="Ayu Adaptive logo" width="120">
 
 A modification of [vscode-ayu](https://marketplace.visualstudio.com/items?itemName=teabyii.ayu) with Atom One, Adapta GTK and macOS Mojave color palette.
 
@@ -18,14 +18,25 @@ If you want to setup File Icon, install the original [vscode-ayu theme](https://
 
 ## Screenshots
 
+Previews of the current VS Code UI, including the editor, terminal, and Chat panel.
+
 ### Ayu One
-![ayu-one](assets/one.png)
+![Ayu One theme preview](https://raw.githubusercontent.com/icui/ayu-adaptive/master/assets/one.png)
+
+### Ayu One (Dark Separators)
+![Ayu One with dark separators theme preview](https://raw.githubusercontent.com/icui/ayu-adaptive/master/assets/two.png)
 
 ### Ayu Adapta
-![ayu-adapta](assets/adapta.png)
+![Ayu Adapta theme preview](https://raw.githubusercontent.com/icui/ayu-adaptive/master/assets/adapta.png)
+
+### Ayu Adapta (Dark Separators)
+![Ayu Adapta with dark separators theme preview](https://raw.githubusercontent.com/icui/ayu-adaptive/master/assets/adapta2.png)
 
 ### Ayu Mojave
-![ayu-mojave](assets/mojave.png)
+![Ayu Mojave theme preview](https://raw.githubusercontent.com/icui/ayu-adaptive/master/assets/mojave.png)
+
+### Ayu Mojave (Dark Separators)
+![Ayu Mojave with dark separators theme preview](https://raw.githubusercontent.com/icui/ayu-adaptive/master/assets/mojave2.png)
 
 ## Development
 

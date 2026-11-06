@@ -1,3 +1,7 @@
+## 0.2.3
+`2019-9-18`
+Update for new vscode UI with light and dark separator variants
+
 ## 0.1.5
 `2019-9-18`
 Improved bracket matching color
